@@ -1,0 +1,58 @@
+@charset "ISO-8859-1";
+
+body {
+	font-family: "Arial";
+	font-size: 18pt;
+	color: purple;
+	background-color: #F6EAF4;
+}
+
+h1 {
+	font-family: cursive;
+	font-size: 60px;
+	font-weight: 700;
+	text-align: center;		
+}
+
+form{
+	margin-left: 25%;
+}
+
+.boton {
+	background: purple;
+	border-style: none;
+	font-size: 20pt;
+	width: 250px;
+	height: 45px;
+	border-radius: 1em;
+	border: 3px double;
+	color: white;
+	margin-bottom: 10px;
+	cursor: pointer;
+	box-shadow: 2px 2px 5px #999;
+	
+}
+
+.boton:hover {
+	color: #FBE402;
+	text-decoration: none;
+}
+
+#baja {
+	 font-size: 20pt;
+	 height: 45px;	 
+	 width: 250px;
+}
+
+#Limpiar {
+	 font-size: 20pt;
+	 height: 45px;	 
+	 width: 250px;
+}
+
+#InicioCRUD {
+	 font-size: 20pt;
+	 height: 45px;	 
+	 width: 250px;
+	 margin-left: 15%;
+}

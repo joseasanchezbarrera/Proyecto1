@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/estiloModificarbombero1.css">
+<script type="text/javascript" src="js/inicioCrud.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.boton').mouseover(function() {
+		$('audio')[0].play();
+	});
+});
+</script> 
+
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Formulario Modificar Bombero</h1>
+	<!-- El action sera el servlet(controlador) al que vamos a ir -->	
+	<form action="ControladorModificarBombero1" method="get">
+	
+    	Idbombero: <input type="number" name="idbombero" value=0>
+		<br/><br/>
+		
+		<input id="modificar" class="boton" type="submit" value="modificar"/>
+		<input id="Limpiar" class="boton" type="reset" value="Limpiar"/>
+		<br/><br/>
+		
+		
+	</form>	
+	<form action="InicioCRUD.html">
+		<input id="InicioCRUD" class="boton" type="submit" value="InicioCRUD"/>
+		<br/><br/>
+		</form>
+		
+		<audio>
+<source src="SonidoBoton.mp3" type="audio/mp3">
+<source src="SonidoBoton.ogg" type="audio/ogg"> <!-- Audio solo para FireFox y Mozilla -->
+</audio>
+	
+</body>
+</html>

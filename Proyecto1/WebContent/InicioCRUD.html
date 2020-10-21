@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="css/estiloCrud.css">
+<script type="text/javascript" src="js/inicioCrud.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.boton').mouseover(function() {
+		$('audio')[0].play();
+	});
+});
+</script> 
+
+<title>Insert title here</title>
+</head>
+<body>
+
+<h1>Pulsa la caja en la cual vas a trabajar</h1>
+
+<form name="formulario1" method="post" action="indexAltabombero.html">
+<input id="Alta" class="boton" type="button" value="Alta" name="botonAlta"/> 
+</form>
+
+<form name="formulario2" method="post" action="indexBajabombero.html">
+<input id="Baja" class="boton" type="button" value="Baja" name="botonBaja"/> 
+</form>
+
+<form name="formulario3" method="get" action="indexBuscarbombero.html">
+<input id="Buscar" class="boton" type="button" value="Buscar" name="botonBuscar"/> 
+</form>
+
+<form name="formulario4" method="get" action="indexModificarFecha1.html">
+<input id="Buscar" class="boton" type="button" value="Cubrir24horas" name="botonCubrir24horas"/> 
+</form>
+
+<form name="formulario5" method="get" action="indexListadobomberos.html">
+<input id="ListadoBomberos" class="boton" type="button" value="ListadoBomberos" name="botonListar"/> 
+</form>
+
+<form name="formulario6" method="post" action="indexModificarbombero1.html">
+<input id="Modificar" class="boton" type="button" value="Modificar" name="botonModificar"/> 
+</form>
+
+<div>
+	<img alt="" width="100" src="Imagenes/BomberoTazmania1.jpg">
+</div>
+
+<audio>
+<source src="SonidoBoton.mp3" type="audio/mp3">
+<source src="SonidoBoton.ogg" type="audio/ogg"> <!-- Audio solo para FireFox y Mozilla -->
+</audio>
+
+</body>
+</html>

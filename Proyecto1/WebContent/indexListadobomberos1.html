@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="EstiloListadoBomberos1.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('.boton').mouseover(function() {
+		$('audio')[0].play();
+	});
+});
+</script> 
+
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Formulario Listado de Bomberos</h1><br/>
+	<!-- El action sera el servlet(controlador) al que vamos a ir -->
+	
+	<form action="ControladorListadoBomberos1" method="get">
+	
+		<input id="ListadoBomberos" class="boton" type="submit" value="Listado Cubrir24horas"/>
+		<br/><br/>
+		
+	</form>
+		
+<audio>
+<source src="SonidoBoton.mp3" type="audio/mp3">
+<source src="SonidoBoton.ogg" type="audio/ogg"> <!-- Audio solo para FireFox y Mozilla -->
+</audio>
+
+</body>
+</html>
