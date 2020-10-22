@@ -34,7 +34,7 @@ $(document).ready(function() {
 <br/><br/>
 
 <form action="ControladorListadoBomberos1" method="get">
-<input id="ListadoBomberos" class="boton" type="submit" value="Listado Cubrir24horas"/>
+<input id="Cubrir24horas" class="boton" type="submit" value="Listado Cubrir24horas"/>
 </form>
 
 <audio>

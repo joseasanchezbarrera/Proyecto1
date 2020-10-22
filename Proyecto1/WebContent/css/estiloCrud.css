@@ -26,7 +26,7 @@ form{
 img {
 	width: 150px;
 	height: 200px;
-	margin-left: 65%;
+	margin-left: 75%;
 	margin-top: 7%;
 	border-radius: 25px;
 	box-shadow: 2px 2px 5px #999;
@@ -49,4 +49,53 @@ img {
 	color: #FBE402;
 	text-decoration: none;
 }
+
+#Alta {
+	position: absolute;
+	height: 50px;
+	left: 50px;
+	top: 215px;
+	font-size: 20pt;
+}
+
+#Baja {
+	position: absolute;
+	height: 50px;
+	left: 50px;
+	top: 315px;
+	font-size: 20pt;
+}
+
+#Buscar {
+	position: absolute;
+	height: 50px;
+	left: 50px;
+	top: 415px;
+	font-size: 20pt;	
+}
+
+#Cubrir24horas {
+	position: absolute;
+	height: 50px;
+	left: 450px;
+	top: 215px;
+	font-size: 18pt;
+}
+
+#ListadoBomberos {
+	position: absolute;
+	height: 50px;
+	left: 450px;
+	top: 315px;
+	font-size: 16pt;
+}
+
+#Modificar {
+	position: absolute;
+	height: 50px;
+	left: 450px;
+	top: 415px;
+	font-size: 20pt;
+}
+
 
