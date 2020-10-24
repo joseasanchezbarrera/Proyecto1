@@ -37,7 +37,7 @@ private EntityManager em;
 	}
 	
 	/**
-	 * metodo que modifica en la bbdd un bombero  
+	 * metodo que modifica en la bbdd fecha de ir a cubriri 
 	 * @return 0 en caso de que no haya conexion, el id en caso de que
 	 * se haya modificado
 	 */

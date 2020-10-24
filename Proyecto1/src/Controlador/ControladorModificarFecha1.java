@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 import modelo.entidad.Bombero1;
 
 /**
- * Servlet implementation class ControladorModificarBombero1.
- * Se comunica con el HTML form action="ControladorModificarBombero1"
+ * Servlet implementation class ControladorModificarFecha1.
+ * Se comunica con el HTML form action="ControladorModificarFecha1"
  */
 @WebServlet("/ControladorModificarFecha1")
 public class ControladorModificarFecha1 extends HttpServlet {
@@ -44,7 +44,7 @@ public class ControladorModificarFecha1 extends HttpServlet {
 		if(b == null) {
 			request.setAttribute("mensajeError", "El Idbombero numero: " + iId + " No existe,"
 			+ " clicla en volver al formulario de Modificar Fecha o Listado de Bomberos");
-			request.getRequestDispatcher("errormodificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/errormodificarFecha.jsp").forward(request, response);
 			
 		}
 			else {
@@ -55,15 +55,8 @@ public class ControladorModificarFecha1 extends HttpServlet {
 		}
 		System.out.println(b);
 		
-		//habria que comunicarse con la capa gestora dentro del modelo, pero en este caso no lo hago
-		//lo dejo preparado po si algun dia lo necesito
-				//GestorBuscarBombero gb = new GestorBuscarBombero();	
-			    //gb.buscar(iId);
-		
-		request.getRequestDispatcher("indexModificarFecha.jsp").forward(request, response);
-		
-		
-		
+		request.getRequestDispatcher("jspCubrir/indexModificarFecha.jsp").forward(request, response);
+			
 	}
 
 	/**

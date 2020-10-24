@@ -31,7 +31,7 @@ public class ControladorListadoBomberos1 extends HttpServlet {
 				List<Bombero1> listaBombero1 = daoListadoBomberos.listar();
 				request.setAttribute("listaBomberos1", listaBombero1);
 				
-				request.getRequestDispatcher("listadoBomberos1.jsp").forward(request, response);
+				request.getRequestDispatcher("jspCubrir/listadoBomberos1.jsp").forward(request, response);
 				
 				response.getWriter().append("Served at: ").append("listaBomberos1");
 	}

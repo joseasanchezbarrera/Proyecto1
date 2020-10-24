@@ -14,8 +14,8 @@ import modelo.entidad.Bombero1;
 import modelo.negocio.GestorModificarFecha;
 
 /**
- * Servlet implementation class ControladorModificarBombero.
- * Se comunica con el HTML form name="funcion" action="ControladorModificarBombero" pero en JSP no en HTML
+ * Servlet implementation class ControladorModificarFecha.
+ * Se comunica con el HTML form name="funcion" action="ControladorModificarFecha" pero en JSP no en HTML
  */
 @WebServlet("/ControladorModificarFecha")
 public class ControladorModificarFecha extends HttpServlet {
@@ -24,27 +24,16 @@ public class ControladorModificarFecha extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-   /* public ControladorModificarBombero() {
-        super();
-        // TODO Auto-generated constructor stub
-    }*/
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
-	 * @param dateFormat 
-	 * @param sFecha1 
-	 * @param formatoDelTexto 
-	 * @param String 
-	 * @param format 
-	 * @param format 
-	 * @param  
 	 * @param em 
 	 * @param id1 
 	 * @throws ParseException 
@@ -52,7 +41,6 @@ public class ControladorModificarFecha extends HttpServlet {
 	 */
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
 		
 		String idbombero = request.getParameter("idbombero");
 		String nombre = request.getParameter("nombre");
@@ -96,34 +84,34 @@ public class ControladorModificarFecha extends HttpServlet {
 			
 			//mediante requestDisptcher le decimos a donde queremos ir, es decir,
 			//continuamos con la peticion http en otro recurso
-			request.getRequestDispatcher("modificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		case -2:
 			//El idbombero no puede ser mayor de 10000
 			request.setAttribute("mensajeError", "El idbombero tiene que ser menor de 10000");
-			request.getRequestDispatcher("modificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;	
 		case -3:
 			//La Categoria no puede estar vacia
 			request.setAttribute("mensajeError", "La Categoria NO puede estar vacia");
-			request.getRequestDispatcher("modificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		case -4:
 			//El Idbombero no puede estar vacio
 			request.setAttribute("mensajeError", "El Idbombero NO puede estar vacio");
-			request.getRequestDispatcher("modificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		case -5:
 			//El Turno no puede estar vacio
 			request.setAttribute("mensajeError", "El Turno No puede estar vacio");
-			request.getRequestDispatcher("modificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		default:
 			// en caso de que se haya modificado
 			request.setAttribute("mensaje1", "El Bombero con ID: "+b.getIdbombero());
 			request.setAttribute("mensaje2", "Categoria: " + b.getCategoria()+", "+"Turno: " + b.getTurno()+"<br/>Nombre: " + b.getNombre()+
             "<br/>Ha sido modificado por la fecha: " + b.getFecha());
-			request.getRequestDispatcher("modificarFecha.jsp").forward(request, response);
+			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		}	
 			

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="indexModificarFecha.css">
+<link rel="stylesheet" type="text/css" href="cssCubrir/indexModificarFecha.css">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -60,6 +60,11 @@ $(document).ready(function() {
 <input id="ListadoBomberos" class="boton" type="submit" value="Listado Cubrir24horas"/>
 <br/><br/>
 </form>
+
+<form action="InicioCRUD.html">
+		<input id="InicioCRUD" class="boton" type="submit" value="InicioCRUD"/>
+		<br/><br/>
+		</form>
 		
 		<audio>
 <source src="SonidoBoton.mp3" type="audio/mp3">
