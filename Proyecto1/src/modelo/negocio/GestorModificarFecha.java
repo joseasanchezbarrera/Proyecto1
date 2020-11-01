@@ -43,6 +43,7 @@ public class GestorModificarFecha {
 
 				int id = daoModificarFecha.modificar(b);
 				return id;
+				
 			}
 			
 			DaoModificarFecha daoModificarFecha = new DaoModificarFecha();

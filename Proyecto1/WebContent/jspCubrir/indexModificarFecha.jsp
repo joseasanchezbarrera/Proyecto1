@@ -23,7 +23,7 @@ $(document).ready(function() {
 	<!-- El action sera el servlet(controlador) al que vamos a ir -->	
 	<form name="funcion" action="ControladorModificarFecha" method="post">
 	
-    	Idbombero: <input type="number" readonly="readonly" name="idbombero" value=${bombero.idbombero}>
+    	Idbombero: <input type="number" readonly="readonly" name="idbombero" value="${bombero.idbombero}">
 		<br/><br/>
 		
 		Categoria: <select name="categoria"> 
@@ -46,7 +46,7 @@ $(document).ready(function() {
 		</select>	
 		<br/><br/>
 			
-		Nombre: <input type="text" readonly="readonly" name="nombre" value="${bombero.nombre}">
+		Nombre: <input type="text" readonly="readonly" name="nombre" size="45" value="${bombero.nombre}">
 		<br/><br/>	
 		
 		Fecha: <input type="date" name="fecha" value="${bombero.fecha}">

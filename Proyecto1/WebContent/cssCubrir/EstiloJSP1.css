@@ -9,7 +9,7 @@ body {
 
 a {
 	position: relative;
-	left: 20%;
+	left: 33%;	
 	top: 18px;
 	font-size: 20px;
 	color: #848484;
@@ -29,11 +29,17 @@ h1 {
 
 table {
 	position: relative;
-	left: 20%;
+	margin-left: 10%;	
 }
 
 table tr:nth-child(2) {	
+	margin: 0 auto;	
 	background-color: #f00;
+}
+
+table tr:nth-child(62) {	
+	margin: 0 auto;	
+	background-color: pink;
 }
 
 .boton {

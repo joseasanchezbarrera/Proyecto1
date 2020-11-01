@@ -43,7 +43,7 @@ public class ControladorModificarFecha1 extends HttpServlet {
 		Bombero1 b = em.find(Bombero1.class, iId);
 		if(b == null) {
 			request.setAttribute("mensajeError", "El Idbombero numero: " + iId + " No existe,"
-			+ " clicla en volver al formulario de Modificar Fecha o Listado de Bomberos");
+			+ " clicla en volver al formulario de Modificar Fecha o Listado Cubrir24horas");
 			request.getRequestDispatcher("jspCubrir/errormodificarFecha.jsp").forward(request, response);
 			
 		}
