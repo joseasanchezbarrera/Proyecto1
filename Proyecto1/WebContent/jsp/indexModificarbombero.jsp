@@ -45,7 +45,7 @@ $(document).ready(function() {
 		</select>	
 		<br/><br/>
 			
-		Nombre: <input type="text" name="nombre" value="${bombero.nombre}">
+		Nombre: <input type="text" name="nombre" size="45" value="${bombero.nombre}">
 		<br/><br/>	
 		
 		<input id="modificar" class="boton" type="submit" value="modificar"/>

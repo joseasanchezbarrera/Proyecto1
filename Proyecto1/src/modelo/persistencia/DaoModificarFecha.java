@@ -82,7 +82,7 @@ private EntityManager em;
 				}
 				
 				//para hacer la consulta debemos de usar JPQL
-				Query query = em.createQuery("select b from Bombero1 b");
+				Query query = em.createQuery("select b from Bombero1 b order by b.fecha");
 				List<Bombero1> listaBomberos1 = query.getResultList();
 				return listaBomberos1;
 			}

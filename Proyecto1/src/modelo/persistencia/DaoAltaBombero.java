@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import modelo.entidad.Bombero;
+import modelo.entidad.Bombero1;
 
 public class DaoAltaBombero {
 
@@ -46,9 +47,18 @@ private EntityManager em;
 		if(!abrirConexion()) {
 			return 0;
 		}
+		
+		// Me traigo de la tabla del bombero1 y creo el Bombero1 b1
+				Bombero1 b1 = new Bombero1();
+				b1.setIdbombero(b.getIdbombero());
+				b1.setCategoria(b.getCategoria());
+				b1.setTurno(b.getTurno());
+				b1.setNombre(b.getNombre());
+				
 		EntityTransaction et = em.getTransaction();
 				et.begin();
-				em.persist(b);    
+				em.persist(b);
+				em.persist(b1); // Se persiste tambien el bombero de la tabla bombero1
 				et.commit();
 				cerrarConexion();				    		
 		//una vez persistido se me actualiza el objeto con su id, y podemos devolverlo

@@ -9,6 +9,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import modelo.entidad.Bombero;
+import modelo.entidad.Bombero1;
 
 public class DaoModificarBombero {
 
@@ -46,12 +47,21 @@ private EntityManager em;
 			return 0;
 		}
 		
+		// Me traigo de la tabla del bombero1, y recupero el bombero1 con Bombero1.class
+		Bombero1 b1 = em.find(Bombero1.class, b.getIdbombero());
+		b1.setIdbombero(b.getIdbombero());
+		b1.setCategoria(b.getCategoria());
+		b1.setTurno(b.getTurno());
+		b1.setNombre(b.getNombre());
+		
 		/*merge sincroninza la bd con el objeto
 		  tambien puede servir para dar de alta*/
 				EntityTransaction et = em.getTransaction();								
 					et.begin();		
 				    b= em.merge(b);
+				    b1= em.merge(b1); // modifico tambien la tabla de bombero1
 					em.persist(b);
+					em.persist(b1);
 					et.commit();
 					System.out.println(em.find(Bombero.class, b.getIdbombero()));
 					cerrarConexion();
