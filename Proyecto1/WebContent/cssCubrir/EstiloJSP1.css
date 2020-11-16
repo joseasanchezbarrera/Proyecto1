@@ -37,8 +37,7 @@ table tr:nth-child(2) {
 	background-color: #f00;
 }
 
-table tr:nth-child(62) {	
-	margin: 0 auto;	
+table tr:last-child {
 	background-color: pink;
 }
 
