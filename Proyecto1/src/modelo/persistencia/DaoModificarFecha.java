@@ -60,20 +60,6 @@ private EntityManager em;
 				System.out.println("a ver si sale " + b.getIdbombero() + " "+b.getNombre());
 				return b.getIdbombero();
 			}
-	
-	// Creo el metodo existe con el find para encontrar al bombero
-	
-	public int noExiste(int idbombero) {
-		if(!abrirConexion()) {
-			return 0;
-		}
-		Bombero1 b = em.find(Bombero1.class, idbombero);
-		if(b == null) {
-		return -6;
-			}else {
-				return 1;
-				}
-	}
 			
 			@SuppressWarnings("unchecked")
 			public List<Bombero1> listar() {

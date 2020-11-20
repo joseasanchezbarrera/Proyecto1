@@ -76,34 +76,13 @@ public class ControladorModificarFecha extends HttpServlet {
 		
 		switch (respuesta) {
 		case -1:
-			//Como queremos avisar a la pagina que no se ha podido modificar
-			//le podemos mandar mensajes, podemos mandar lo que sea
-			//es una estructura de tipo hash que podremos recuperar en la parte de 
-			//la vista(jsps)
-			request.setAttribute("mensajeError", "El Nombre  tiene que tener más de 10 caracteres");
-			
-			//mediante requestDisptcher le decimos a donde queremos ir, es decir,
-			//continuamos con la peticion http en otro recurso
+			//No se ha introducido ninguna fecha
+			request.setAttribute("mensajeError", "No se ha introducido ninguna fecha");
 			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		case -2:
-			//El idbombero no puede ser mayor de 10000
-			request.setAttribute("mensajeError", "El idbombero tiene que ser menor de 10000");
-			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
-			break;	
-		case -3:
-			//La Categoria no puede estar vacia
-			request.setAttribute("mensajeError", "La Categoria NO puede estar vacia");
-			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
-			break;
-		case -4:
-			//El Idbombero no puede estar vacio
-			request.setAttribute("mensajeError", "El Idbombero NO puede estar vacio");
-			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
-			break;
-		case -5:
-			//El Turno no puede estar vacio
-			request.setAttribute("mensajeError", "El Turno No puede estar vacio");
+			//La fecha es la misma
+			request.setAttribute("mensajeError", "La fecha "+fecha+" del Idbombero " +categoria+" "+idbombero+" es la misma, introducir una nueva");
 			request.getRequestDispatcher("jspCubrir/modificarFecha.jsp").forward(request, response);
 			break;
 		default:
